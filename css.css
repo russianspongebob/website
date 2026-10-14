@@ -1,0 +1,21 @@
+h1 {
+    color: red;
+    text-align: center;
+    text-shadow: 50px;
+}
+.diddy{
+    animation-name: rgb;
+    animation-duration: 5s;
+    color:red;
+}
+
+#grad{
+     background-image: linear-gradient(to top, red, blue, pink, brown, magenta, purple); 
+  
+     height: 200px;
+}
+
+@keyframes rgb{
+    from {background-color: red;}
+    to {background-color: aqua;}
+}
