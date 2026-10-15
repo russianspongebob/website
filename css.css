@@ -1,12 +1,12 @@
-h1 {
-    color: red;
-    text-align: center;
-    text-shadow: 50px;
+body {
+    margin: 0;
 }
+
 .diddy{
     animation-name: rgb;
     animation-duration: 5s;
-    color:red;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #grad{
@@ -14,10 +14,68 @@ h1 {
   
      height: 200px;
 }
-.cars{
-    height: 500px;
-    background-color: blueviolet;
-    animation-name: rgb;
+
+.hero{
+    background-image: url("asset/background.avif");
+    background-size: cover;      /* fill the area, crop if needed */
+    background-position: center; /* keep the focal point centered */
+    background-repeat: repeat;
+
+    display: flex;
+    justify-content: center;  /* horizontal */
+    align-items: center;      /* vertical */
+    min-height: 100dvh;
+    
+}
+
+.hero-title{
+    color: white;
+    font-size: 3rem;
+}
+
+.back2{
+    background-color: #1a1a2e;
+    display: flex;
+    min-height: 100dvh;
+}
+
+.navbar{
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+    padding: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar a:hover {
+    color: rgb(240, 78, 78);
+}
+
+
+}
+
+.github-link{
+    background-color: white;
+    position: fixed;
+    bottom: 3rem;
+    right: 2rem;
+}
+
+.github-link img {
+    width: 3rem;   /* control the logo size */
+    height: auto;
+    display: block;
 }
 
 @keyframes rgb{
