@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up | My Site</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="split">
+    <aside class="panel">
+      <p class="brand">My Site</p>
+      <h1>Create your account.</h1>
+      <p>It takes under a minute.</p>
+    </aside>
+    <section class="form-side">
+      <form id="form" data-endpoint="/api/signup" novalidate>
+        <h2>Sign up</h2>
+        <label>Name<input type="text" name="name" autocomplete="name" maxlength="80" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Password<input type="password" name="password" autocomplete="new-password" minlength="8" required>
+          <span class="hint">At least 8 characters.</span></label>
+        <p id="msg" role="alert"></p>
+        <button type="submit">Create account</button>
+        <p class="alt">Already registered? <a href="/login.html">Log in</a></p>
+      </form>
+    </section>
+  </main>
+  <script src="/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | My Site</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="split">
+    <aside class="panel">
+      <p class="brand">My Site</p>
+      <h1>Welcome back.</h1>
+      <p>Log in to pick up where you left off.</p>
+    </aside>
+    <section class="form-side">
+      <form id="form" data-endpoint="/api/login" novalidate>
+        <h2>Log in</h2>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+        <p id="msg" role="alert"></p>
+        <button type="submit">Log in</button>
+        <p class="alt">No account yet? <a href="/signup.html">Sign up</a></p>
+      </form>
+    </section>
+  </main>
+  <script src="/auth.js"></script>
+</body>
+</html>

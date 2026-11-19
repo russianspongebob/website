@@ -1,0 +1,38 @@
+:root {
+  --bg: #f5f7f7; --ink: #10201f; --muted: #52625f; --line: #cfd8d6;
+  --accent: #0f766e; --accent-ink: #ffffff; --panel: #0b3b37; --error: #b42318;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; }
+h1, h2 { line-height: 1.15; margin: 0; }
+.split { min-height: 100%; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+.panel { background: var(--panel); color: #e6f2f0; padding: 3rem; display: flex; flex-direction: column; justify-content: flex-end; gap: 1rem; }
+.panel .brand { margin: 0; font-weight: 700; font-size: 1.1rem; }
+.panel h1 { font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -0.03em; max-width: 12ch; }
+.panel p { margin: 0; max-width: 32ch; color: #b7d3cf; }
+.form-side { display: flex; align-items: center; padding: 3rem; }
+form { width: 100%; max-width: 24rem; margin: 0 auto; display: grid; gap: 1.1rem; }
+form h2 { font-size: 1.75rem; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
+label { display: grid; gap: 0.35rem; font-weight: 600; font-size: 0.95rem; }
+input { font: inherit; padding: 0.7rem 0.8rem; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink); }
+input:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid #5eead4; outline-offset: 2px; }
+button { font: inherit; font-weight: 700; padding: 0.75rem 1rem; border: 0; border-radius: 6px; background: var(--accent); color: var(--accent-ink); cursor: pointer; }
+button:hover { background: #0c5f59; }
+button:disabled { opacity: 0.6; cursor: wait; }
+button.secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+button.secondary:hover { background: #e8eeed; }
+#msg { min-height: 1.4em; margin: 0; color: var(--error); font-size: 0.95rem; }
+.alt { margin: 0; color: var(--muted); }
+a { color: var(--accent); font-weight: 600; }
+.hint { font-weight: 400; color: var(--muted); font-size: 0.85rem; }
+.dash { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem; display: grid; gap: 1.25rem; }
+.dash h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.03em; }
+.dash p { margin: 0; color: var(--muted); }
+.dash button { justify-self: start; }
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; }
+  .panel { padding: 2rem 1.5rem; min-height: 11rem; }
+  .panel p:not(.brand) { display: none; }
+  .form-side { padding: 2rem 1.5rem; align-items: flex-start; }
+}

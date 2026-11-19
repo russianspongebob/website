@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | My Site</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="dash">
+    <h1 id="hello">Loading...</h1>
+    <p id="info"></p>
+    <button class="secondary" id="logout" type="button">Log out</button>
+  </main>
+  <script>
+    fetch('/api/me').then(async (res) => {
+      if (!res.ok) return (window.location.href = '/login.html');
+      const user = await res.json();
+      document.getElementById('hello').textContent = 'Hi, ' + user.name + '.';
+      document.getElementById('info').textContent = 'Signed in as ' + user.email + '.';
+    });
+    document.getElementById('logout').addEventListener('click', async () => {
+      await fetch('/api/logout', { method: 'POST' });
+      window.location.href = '/login.html';
+    });
+  </script>
+</body>
+</html>
